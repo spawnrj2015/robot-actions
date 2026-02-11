@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  tests-chrome:
+  tests-chromium:
 
     runs-on: ubuntu-latest
 
@@ -47,7 +47,7 @@ jobs:
       uses: actions/upload-artifact@v6.0.0
       if: always()
       with:
-        name: Test Report
+        name: Chromium Test Report
         path: ./logs
 
   tests-firefox:
@@ -90,5 +90,5 @@ jobs:
       uses: actions/upload-artifact@v6.0.0
       if: always()
       with:
-        name: Test Report
+        name: Firefox Test Report
         path: ./logs
